@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 Interactive Bar Chart</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<h2>Noah Garfunkel - Project 1 </h2>
+<h2>Data from: https://www.cdc.gov/dhdsp/maps/atlas/index.htm</h2>
+<h2>D3 library used for visualizations</h2>
+
+<button onclick="location.href='index.html'">Example Charts</button>
+
+<body>
+    <div class="container">
+        <h1>Customized Barchart of Data in America</h1>
+
+        <select id="columnSelector">
+            <option value="poverty_perc">Poverty Percentage</option>
+            <option value="median_household_income">Median Household Income</option>
+            <option value="education_less_than_high_school_percent">Education Less Than High School Percentage</option>
+            <option value="air_quality">Air Quality</option>
+            <option value="park_access">Park Access</option>
+            <option value="percent_inactive">Percent Inactive</option>
+            <option value="percent_smoking">Percent Smoking</option>
+            <option value="elderly_percentage">Elderly Percentage</option>
+            <option value="number_of_hospitals">Number of Hospitals</option>
+            <option value="number_of_primary_care_physicians">Number of Primary Care Physicians</option>
+            <option value="percent_no_heath_insurance">Percent No Health Insurance</option>
+            <option value="percent_high_blood_pressure">Percent High Blood Pressure</option>
+            <option value="percent_coronary_heart_disease">Percent Coronary Heart Disease</option>
+            <option value="percent_stroke">Percent Stroke</option>
+            <option value="percent_high_cholesterol">Percent High Cholesterol</option>
+        </select>
+        <svg id="chartCustomizable"></svg>
+
+        <h1>Customized Scatterplot of Data in America</h1>
+
+        <select id="columnSelectorY">
+            <option value="poverty_perc">Poverty Percentage</option>
+            <option value="median_household_income">Median Household Income</option>
+            <option value="education_less_than_high_school_percent">Education Less Than High School Percentage</option>
+            <option value="air_quality" selected>Air Quality</option>
+            <option value="park_access">Park Access</option>
+            <option value="percent_inactive">Percent Inactive</option>
+            <option value="percent_smoking">Percent Smoking</option>
+            <option value="elderly_percentage">Elderly Percentage</option>
+            <option value="number_of_hospitals">Number of Hospitals</option>
+            <option value="number_of_primary_care_physicians">Number of Primary Care Physicians</option>
+            <option value="percent_no_heath_insurance">Percent No Health Insurance</option>
+            <option value="percent_high_blood_pressure">Percent High Blood Pressure</option>
+            <option value="percent_coronary_heart_disease">Percent Coronary Heart Disease</option>
+            <option value="percent_stroke">Percent Stroke</option>
+            <option value="percent_high_cholesterol">Percent High Cholesterol</option>
+        </select>
+
+        <select id="columnSelectorX">
+            <option value="poverty_perc">Poverty Percentage</option>
+            <option value="median_household_income">Median Household Income</option>
+            <option value="education_less_than_high_school_percent">Education Less Than High School Percentage</option>
+            <option value="air_quality">Air Quality</option>
+            <option value="park_access">Park Access</option>
+            <option value="percent_inactive">Percent Inactive</option>
+            <option value="percent_smoking">Percent Smoking</option>
+            <option value="elderly_percentage">Elderly Percentage</option>
+            <option value="number_of_hospitals">Number of Hospitals</option>
+            <option value="number_of_primary_care_physicians">Number of Primary Care Physicians</option>
+            <option value="percent_no_heath_insurance">Percent No Health Insurance</option>
+            <option value="percent_high_blood_pressure">Percent High Blood Pressure</option>
+            <option value="percent_coronary_heart_disease">Percent Coronary Heart Disease</option>
+            <option value="percent_stroke">Percent Stroke</option>
+            <option value="percent_high_cholesterol">Percent High Cholesterol</option>
+        </select>
+        <svg id="scatterplotCustomizable"></svg>
+
+        <h1>Customized Map of Data in America</h1>
+
+        <select id="columnSelectorMap">
+            <option value="poverty_perc">Poverty Percentage</option>
+            <option value="median_household_income">Median Household Income</option>
+            <option value="education_less_than_high_school_percent">Education Less Than High School Percentage</option>
+            <option value="air_quality">Air Quality</option>
+            <option value="park_access">Park Access</option>
+            <option value="percent_inactive">Percent Inactive</option>
+            <option value="percent_smoking">Percent Smoking</option>
+            <option value="elderly_percentage">Elderly Percentage</option>
+            <option value="number_of_hospitals">Number of Hospitals</option>
+            <option value="number_of_primary_care_physicians">Number of Primary Care Physicians</option>
+            <option value="percent_no_heath_insurance">Percent No Health Insurance</option>
+            <option value="percent_high_blood_pressure">Percent High Blood Pressure</option>
+            <option value="percent_coronary_heart_disease">Percent Coronary Heart Disease</option>
+            <option value="percent_stroke">Percent Stroke</option>
+            <option value="percent_high_cholesterol">Percent High Cholesterol</option>
+        </select>
+        <div class="choroplethCustomizable"></div>
+
+        <svg height="5" width="5" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="lightstripe" patternUnits="userSpaceOnUse" width="5" height="5"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==" x="0" y="0" width="5" height="5"> </image> </pattern> </defs></svg>
+        <div id="tooltip2"></div>
+
+        <h1>Poverty Percentage Across Counties in America (With Brush)</h1>
+        
+        <svg id="chartBrush"></svg>
+    </div>
+
+    <div id="tooltip"></div>
+    
+    
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/topojson.v3.js"></script>
+    <script src="js/barchartCustomizable.js"></script>
+    <script src="js/scatterplotCustomizable.js"></script>
+    <script src="js/choroplethCustomizable.js"></script>
+    <script src="js/barchartBrush.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

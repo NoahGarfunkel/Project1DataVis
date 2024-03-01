@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 Interactive Bar Chart</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<h2>Noah Garfunkel - Project 1 </h2>
+<h2>Data from: https://www.cdc.gov/dhdsp/maps/atlas/index.htm</h2>
+<h2>D3 library used for visualizations</h2>
+
+<button onclick="location.href='index2.html'">Customizable Charts</button>
+
+<body>
+    <div class="container">
+        <h1>Poverty Percentage Across Counties in America</h1>
+        
+        <svg id="chart"></svg>
+
+        <h1>Air Quality Across Counties in America</h1>
+
+        <svg id="chartAir"></svg>
+
+        <h1>Air Quality vs. Poverty Percentage in America</h1>
+
+        <svg id="scatterplot"></svg>
+
+        <h1>Poverty in America</h1>
+
+        <div class="choropleth"></div>
+
+        <h1>Air Quality in America</h1>
+
+        <div class="choropleth2"></div>
+
+        <div id="tooltip2"></div>
+    </div>
+
+    <div id="tooltip"></div>
+    
+    
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/barchart.js"></script>
+    <script src="js/barchartAir.js"></script>
+    <script src="js/scatterplot.js"></script>
+    <script src="js/topojson.v3.js"></script>
+    <script src="js/choropleth.js"></script>
+    <script src="js/choropleth2.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+body {
+    padding: 30px;
+    background: #f8f8f8;
+  }
+  .container {
+    width: 740px;
+    margin: 0 auto;
+  }
+  #footer {
+    font-size: 11px;
+    display: flex;
+  }
+  #footer .footer-col {
+    flex: 1;
+  }
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: 1.4rem;
+  }
+  .bar {
+    fill: #CCCCCC;
+    shape-rendering: crispEdges;
+  }
+  .bar2 {
+    fill: #B2DFEE;
+    shape-rendering: crispEdges;
+  }
+  .bar3 {
+    fill: #4682B4;
+    shape-rendering: crispEdges;
+  }
+  .bar:hover {
+    fill: #c15f45;
+    transition: fill ease-in-out 200ms;
+  }
+  .axis text {
+    fill: #666;
+    font-size: 12px;
+  }
+  .axis path {
+    shape-rendering: crispEdges;
+    stroke: #888;
+  }
+  .y-axis path {
+    display: none;
+  }
+  .axis line {
+    display: none;
+  }
+  .btn {
+    font-size: 11px;
+    color: #adadad;
+  }
+  #sorting:hover, #sorting:focus {
+    text-decoration: none;
+    box-shadow: none;
+  }
+  #sorting img {
+    opacity: 0.8;
+  }
+  #tooltip {
+    position: absolute;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 2px 2px 3px 0px rgb(92 92 92 / 0.5);
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+  }
+  .tooltip-label {
+    font-weight: 500;
+    font-size: 10px;
+    color: #888;
+  }
+
+  .background {
+    fill: none;
+    pointer-events: all;
+}
+
+#states {
+fill: #aaa;
+}
+
+#states .active {
+display:none;
+}
+
+#state-borders {
+fill: none;
+stroke: #fff;
+stroke-width: 1.5px;
+stroke-linejoin: round;
+stroke-linecap: round;
+pointer-events: none;
+}
+
+.county-boundary {
+fill: gray;
+stroke: #fff;
+stroke-width: .5px;
+}
+
+.county-boundary:hover, .state:hover {
+fill: orange;
+}
+
+#tooltip {
+  position: absolute;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 2px 2px 3px 0px rgb(92 92 92 / 0.5);
+  border: 1px solid #ddd;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+}
+.tooltip-label {
+  font-weight: 500;
+  font-size: 10px;
+  color: #888;
+}
+
+#tooltip2 {
+  position: absolute;
+  display: none;
+  background: #fff;
+  box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+  border: 1px solid #ddd;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px;
+  min-width: 160px;
+  color: #333;
+}
+.tooltip-title2 {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
